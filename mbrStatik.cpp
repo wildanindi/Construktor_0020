@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class mahasiswa
@@ -18,3 +19,24 @@ class mahasiswa
             setID();
         }
 };
+
+int mahasiswa::nim = 113;
+
+void mahasiswa::setID()
+{
+    id = ++nim;
+}
+
+void mahasiswa::printAll(){
+    cout << "ID   = " << id << endl;
+    cout << "Nama = " << nama << endl;
+    cout << endl;
+}
+
+int main()
+{
+    mahasiswa mhs1("Lia Kurnia");
+    mahasiswa mhs2("Asroni");
+    mahasiswa mhs3("Andi Kurniawan");
+    mahasiswa mhs4("Joko Purbo");
+}
